@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNgConcept.TimeeOut">
+      <class name="practice.DtaPro">
         <methods>
-          <include name="f"/>
+          <include name="orangeCrmTest" invocation-numbers="0"/>
         </methods>
-      </class> <!-- testNgConcept.TimeeOut -->
+      </class> <!-- practice.DtaPro -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
