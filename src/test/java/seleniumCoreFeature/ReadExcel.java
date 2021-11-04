@@ -23,9 +23,7 @@ public class ReadExcel
 		Row r=s.getRow(0);
 		Cell c=r.getCell(0);
 		System.out.println(c);
-		System.out.println(c.getStringCellValue());
-		
-		
+		System.out.println(c.getStringCellValue());	
 		
 	}
 

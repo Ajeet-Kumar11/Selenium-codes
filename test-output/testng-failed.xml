@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="epsilon.CntrlShiftOperation">
+      <class name="testNgConcept.TimeeOut">
         <methods>
-          <include name="controlShift"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- epsilon.CntrlShiftOperation -->
+      </class> <!-- testNgConcept.TimeeOut -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
