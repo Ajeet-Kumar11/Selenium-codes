@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="practice.DtaPro">
+      <class name="practice.Zabra">
         <methods>
-          <include name="orangeCrmTest" invocation-numbers="0"/>
+          <include name="m1"/>
         </methods>
-      </class> <!-- practice.DtaPro -->
+      </class> <!-- practice.Zabra -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

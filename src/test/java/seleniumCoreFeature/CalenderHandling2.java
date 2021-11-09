@@ -12,7 +12,6 @@ public class CalenderHandling2 {
 		System.setProperty("webdriver.gecko.driver", "C:\\Users\\z00467ka\\Desktop\\Selenium files\\geckodriver-v0.29.1-win64\\geckodriver.exe");	
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.navigate().to("https://www.makemytrip.com/");
 		driver.findElement(By.xpath("//div[@class='loginModal displayBlock modalLogin dynHeight personal ']")).click();

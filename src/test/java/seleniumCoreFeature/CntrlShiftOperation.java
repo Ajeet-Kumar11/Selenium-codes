@@ -1,4 +1,4 @@
-package epsilon;
+package seleniumCoreFeature;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
@@ -20,16 +21,16 @@ static WebDriver driver;
   @Test
   public void controlShift()
   {
-	    driver.findElement(By.id("email")).click();
-	    System.out.println("click done");
+	    WebElement wb1=driver.findElement(By.id("email"));
 		Actions act = new Actions(driver);
-		act.keyDown(Keys.SHIFT).sendKeys("a");
-		act.keyUp(Keys.SHIFT).build().perform();
+		act.moveToElement(wb1).click().keyDown(Keys.SHIFT).sendKeys("ajeetkumarsingh");
+		act.keyUp(Keys.SHIFT).perform();
 		act.keyDown(Keys.CONTROL).sendKeys("a");
+		act.sendKeys("c");
 		act.keyUp(Keys.CONTROL).build().perform();
-		driver.findElement(By.id("pass")).click();
-		act.keyDown(Keys.CONTROL).sendKeys("v");
-		act.keyUp(Keys.SHIFT).build().perform();
+		WebElement wb=driver.findElement(By.id("pass"));
+		act.moveToElement(wb).click().keyDown(Keys.CONTROL).sendKeys("v");
+		act.keyUp(Keys.CONTROL).build().perform();
   }
   @BeforeMethod
   public void setUp() 

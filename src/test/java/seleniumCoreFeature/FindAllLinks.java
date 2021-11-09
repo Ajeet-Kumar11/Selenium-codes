@@ -1,4 +1,4 @@
-package epsilon;
+package seleniumCoreFeature;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;

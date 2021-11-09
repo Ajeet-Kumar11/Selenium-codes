@@ -32,7 +32,6 @@ public class WindowHandling
 		System.out.println(driver.getTitle());
 		driver.close();
 		
-		
 	}
 
 }

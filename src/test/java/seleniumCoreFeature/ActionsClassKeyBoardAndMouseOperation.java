@@ -22,6 +22,7 @@ public class ActionsClassKeyBoardAndMouseOperation
 		act.moveToElement(wb).click().sendKeys("rkumarajeet92@gmail.com");
 		act.keyDown(Keys.CONTROL).sendKeys("a");
 		act.sendKeys("c");
+		act.keyUp(Keys.CONTROL).build().perform();
 		WebElement wb2=driver.findElement(By.xpath("//input[@id='pass']"));
 		act.moveToElement(wb2).click().keyDown(Keys.CONTROL).sendKeys("v");
 		act.keyUp(Keys.CONTROL).build().perform();
