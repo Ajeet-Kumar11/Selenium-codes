@@ -15,7 +15,6 @@ public class Handle100Windows
 	    System.setProperty("webdriver.gecko.driver", "C:\\Users\\z00467ka\\Desktop\\Selenium files\\geckodriver-v0.29.1-win64\\geckodriver.exe");	
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 	    driver.get("https://opensource-demo.orangehrmlive.com/");
 	    driver.findElement(By.xpath("//img[@alt='LinkedIn OrangeHRM group']")).click();

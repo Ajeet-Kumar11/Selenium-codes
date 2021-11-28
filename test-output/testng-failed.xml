@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="practice.Zabra">
+      <class name="testNgConcept.DependsOnMthd">
         <methods>
-          <include name="m1"/>
+          <include name="mobile"/>
+          <include name="computer"/>
+          <include name="tv"/>
         </methods>
-      </class> <!-- practice.Zabra -->
+      </class> <!-- testNgConcept.DependsOnMthd -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

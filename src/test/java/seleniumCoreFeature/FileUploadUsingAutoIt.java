@@ -10,7 +10,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class FileUploadUsingAutoIt 
 {
-
 	public static void main(String[] args) throws IOException, InterruptedException 
 	{
 		System.setProperty("webdriver.gecko.driver", "C:\\Users\\z00467ka\\Desktop\\Selenium files\\geckodriver-v0.29.1-win64\\geckodriver.exe");	

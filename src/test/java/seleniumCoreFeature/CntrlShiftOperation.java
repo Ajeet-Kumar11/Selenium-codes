@@ -21,15 +21,15 @@ static WebDriver driver;
   @Test
   public void controlShift()
   {
-	    WebElement wb1=driver.findElement(By.id("email"));
-		Actions act = new Actions(driver);
-		act.moveToElement(wb1).click().keyDown(Keys.SHIFT).sendKeys("ajeetkumarsingh");
-		act.keyUp(Keys.SHIFT).perform();
+	    Actions act = new Actions(driver);
+		WebElement wb = driver.findElement(By.id("email"));
+		act.moveToElement(wb).click().keyDown(Keys.SHIFT).sendKeys("ajeet");
+		act.keyUp(Keys.SHIFT).build().perform();
 		act.keyDown(Keys.CONTROL).sendKeys("a");
 		act.sendKeys("c");
 		act.keyUp(Keys.CONTROL).build().perform();
-		WebElement wb=driver.findElement(By.id("pass"));
-		act.moveToElement(wb).click().keyDown(Keys.CONTROL).sendKeys("v");
+		WebElement wb1=driver.findElement(By.id("pass"));
+		act.moveToElement(wb1).click().keyDown(Keys.CONTROL).sendKeys("v");
 		act.keyUp(Keys.CONTROL).build().perform();
   }
   @BeforeMethod

@@ -22,8 +22,8 @@ public class WriteExcel
 		Row r=s.getRow(0);
 		Cell c=r.createCell(5);
 		c.setCellType(c.CELL_TYPE_STRING);
-		FileOutputStream fos = new FileOutputStream("C:\\Users\\z00467ka\\Desktop\\Zeppelin\\Book1.xlsx");
 		c.setCellValue("Zeppelin");
+		FileOutputStream fos = new FileOutputStream("C:\\Users\\z00467ka\\Desktop\\Zeppelin\\Book1.xlsx");
 		wb.write(fos);
 
 

@@ -1,21 +1,16 @@
-package practice;
+package seleniumCoreFeature;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 
-public class Test 
+public class TableHanding 
 {
 
-	public static void main(String[] args) throws InterruptedException 
+	public static void main(String[] args) 
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\z00467ka\\Desktop\\Selenium files\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
@@ -30,6 +25,7 @@ public class Test
 			String tableHeaders=lst.get(i).getText();
 			System.out.println(tableHeaders);
 		}
+		//printing all the rows
 		List<WebElement> lst1 = driver.findElements(By.xpath("//table[@id='customers']//tr"));
 		System.out.println(lst1.size());
 		for(int i=0;i<lst1.size();i++)
@@ -37,6 +33,13 @@ public class Test
 			String tableRows=lst1.get(i).getText();
 			System.out.println(tableRows);
 			
+		}
+		//printing all the datas in a table
+		List<WebElement> lst2=driver.findElements(By.xpath("//table[@id='customers']//tr//td"));
+		for(int i=0;i<lst2.size();i++)
+		{
+			String totalDatas=lst2.get(i).getText();
+			System.out.println(totalDatas);
 		}
 	}
 

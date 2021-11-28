@@ -1,9 +1,12 @@
 package seleniumCoreFeature;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DynamicWebTable
@@ -11,17 +14,23 @@ public class DynamicWebTable
 
 	public static void main(String[] args) throws InterruptedException
 	{
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\z00467ka\\Desktop\\Selenium files\\geckodriver-v0.29.1-win64\\geckodriver.exe");	
-		WebDriver driver = new FirefoxDriver();
-		driver.get("https://classic.crmpro.com/index.html");
-		driver.findElement(By.name("username")).sendKeys("Ajeet");
-	    driver.findElement(By.name("password")).sendKeys("Test12345!");
-	    Thread.sleep(5000);
-		WebElement wb=driver.findElement(By.xpath("//input[@class='btn btn-small']"));
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].click();", wb);
-		Thread.sleep(5000);
 
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\z00467ka\\Desktop\\Selenium files\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.w3schools.com/html/html_tables.asp");
+		List<WebElement> lst=driver.findElements(By.xpath("//table[@id='customers']//tr//td"));
+		System.out.println(lst.size());
+        for(int i=0;i<lst.size();i++) 
+        {
+        	String text=lst.get(i).getText();
+        	if(text.contains("Italy")) 
+        	{
+        		System.out.println(text);
+        		break;
+        	}
+        }
+			
 	}
 
 }

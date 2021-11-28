@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)" parallel="methods">
+  <listeners>
+    <listener class-name="com.selenium.qa.ExtendReportListner.ExtendReportListner"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testNgConcept.ParrallelExecution">
+      <class name="practice.FacebookTest">
         <methods>
-          <include name="FireFoxTestTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="mahi"/>
         </methods>
-      </class> <!-- testNgConcept.ParrallelExecution -->
+      </class> <!-- practice.FacebookTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 
 public class FindAllLinks 
 {
+	
 static WebDriver driver;
 
   @Test
