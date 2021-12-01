@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -37,23 +38,29 @@ public class NewTest
   @Test
   public void f() throws InterruptedException, IOException, InvalidFormatException 
   { 
-	    String baseUrl = "http://demo.guru99.com/popup.php";
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\z00467ka\\Desktop\\Selenium files\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get(baseUrl);
-		driver.findElement(By.xpath("//a[text()='Click Here']")).click();
-		Thread.sleep(2000);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.findElement(By.xpath("//img[@alt='LinkedIn OrangeHRM group']")).click();
+		driver.findElement(By.xpath("//img[@alt='OrangeHRM on Facebook']")).click();
+		driver.findElement(By.xpath("//img[@alt='OrangeHRM on twitter']")).click();
+		driver.findElement(By.xpath("//img[@alt='OrangeHRM on youtube']")).click();
+		String expTitle="Log in to Facebook";
 		Set<String> set=driver.getWindowHandles();
-		Iterator<String> itr=set.iterator();
-		String parentId=itr.next();
-		String childId=itr.next();
-		driver.switchTo().window(childId);
-		driver.findElement(By.name("emailid")).sendKeys("ajeet");
-		driver.switchTo().window(parentId);
-		String tiltle=driver.getTitle();
-		System.out.println(tiltle);
-	 
+		List<String> lst = new ArrayList<String>(set);
+		for(String windowId : lst)
+		{
+			String actTitle=driver.switchTo().window(windowId).getTitle();
+			if(actTitle.equals(expTitle)) 
+			{
+				driver.switchTo().window(windowId);
+				driver.findElement(By.id("email")).sendKeys("ajeet");
+				System.out.println("pass");
+				break;
+			}
+		}	
   }
   
 }

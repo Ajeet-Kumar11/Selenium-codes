@@ -21,8 +21,8 @@ static WebDriver driver;
   @Test
   public void controlShift()
   {
-	    Actions act = new Actions(driver);
-		WebElement wb = driver.findElement(By.id("email"));
+	  Actions act = new Actions(driver);
+		WebElement wb=driver.findElement(By.id("email"));
 		act.moveToElement(wb).click().keyDown(Keys.SHIFT).sendKeys("ajeet");
 		act.keyUp(Keys.SHIFT).build().perform();
 		act.keyDown(Keys.CONTROL).sendKeys("a");
