@@ -8,6 +8,7 @@ public class FrameHandling
 
 	public static void main(String[] args)
 	{
+		//frame in selenium always starts with 0
 		String baseUrl = "http://demo.guru99.com/test/guru99home/";
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\z00467ka\\Desktop\\Selenium files\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();

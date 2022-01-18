@@ -24,11 +24,7 @@ public class DynamicWebTable
         for(int i=0;i<lst.size();i++) 
         {
         	String text=lst.get(i).getText();
-        	if(text.contains("Italy")) 
-        	{
-        		System.out.println(text);
-        		break;
-        	}
+        	System.out.println(text);
         }
 			
 	}
