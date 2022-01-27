@@ -10,11 +10,12 @@ import org.openqa.selenium.support.ui.Select;
 
 public class DropdownHanding 
 {
-
+	public static WebDriver driver;
+   
 	public static void main(String[] args) throws InterruptedException 
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\z00467ka\\Desktop\\Selenium files\\chromedriver_win32\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.get("http://demo.guru99.com/test/newtours/register.php");
