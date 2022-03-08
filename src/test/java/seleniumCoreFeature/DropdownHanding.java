@@ -18,7 +18,7 @@ public class DropdownHanding
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.get("http://demo.guru99.com/test/newtours/register.php");
+		driver.get("https://demo.guru99.com/test/newtours/register.php");
 		WebElement wb=driver.findElement(By.xpath("//select[@name='country']"));
 		Select sct = new Select(wb);
 		//sct.selectByIndex(6);
